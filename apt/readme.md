@@ -17,6 +17,8 @@ sudo apt install bat
 ln -s $(which batcat) ~/.local/bin/bat
 # fzf
 sudo apt install fzf
+# tldr
+sudo snap install tldr
 ```
 
 ## Install by rust
