@@ -23,11 +23,11 @@ vim.keymap.set("n", "<leader>wl", "5<C-w>>", { desc = "Resize winsow right" })
 vim.keymap.set("n", "<leader>wx", "<cmd>close<CR>", { desc = "Close current split" })
 
 -- tab management
-vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })                     -- open new tab
-vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })              -- close current tab
-vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })                     --  go to next tab
-vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })                 --  go to previous tab
-vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
+vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
+vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
+vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
+vim.keymap.set("n", "<leader>tc", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- use U to redo
 vim.keymap.set("n", "U", "<C-r>")
@@ -59,8 +59,8 @@ vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 
 -- toggle relative line number
 vim.keymap.set(
-    "n",
-    "<leader>ul",
-    "<Cmd>set number <bar> setlocal relativenumber!<CR>",
-    { desc = "toggle relative number" }
+	"n",
+	"<leader>ul",
+	"<Cmd>set number <bar> setlocal relativenumber!<CR>",
+	{ desc = "toggle relative number" }
 )

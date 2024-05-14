@@ -23,7 +23,7 @@ return {
 		mason_lspconfig.setup({
 			ensure_installed = {
 				"lua_ls",
-				"rust_analyzer",
+				-- "rust_analyzer",
 			},
 			automatic_installation = true, -- not the same as ensure_installed
 		})
