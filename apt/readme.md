@@ -2,8 +2,10 @@
 ``` sh
 # build-essential
 sudo apt install build-essential
+# tree
+sudo apt install tree
 # nvim
-sudo snap install --classic nvim
+sudo apt install neovim
 # zsh
 sudo apt install zsh
 sudo chsh $USER -s $(which zsh)
