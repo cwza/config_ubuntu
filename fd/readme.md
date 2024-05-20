@@ -1,1 +1,1 @@
-# `ln -s ~/config/fd ~/.config/fd`
+* `ln -s ~/config/fd ~/.config/fd`

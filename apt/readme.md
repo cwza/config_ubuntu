@@ -2,6 +2,8 @@
 ``` sh
 # build-essential
 sudo apt install build-essential
+# gdb
+sudp apt install gdb
 # tree
 sudo apt install tree
 # nvim
