@@ -13,6 +13,18 @@
 					"cpp"
 				],
 				"path": "./segment-tree.json"
+			},
+			{
+				"language": [
+					"cpp"
+				],
+				"path": "./fenwick-tree.json"
+			},
+			{
+				"language": [
+					"cpp"
+				],
+				"path": "./modulo.json"
 			}
 		]
 	}
