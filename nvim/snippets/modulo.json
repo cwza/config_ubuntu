@@ -20,6 +20,7 @@
             "",
             "struct Modulo {",
             "    ll val;",
+            "    Modulo(): val(0){}",
             "    Modulo(ll _val): val(_val){",
             "        val %= modN;",
             "    }",
