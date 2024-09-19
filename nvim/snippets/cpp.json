@@ -8,6 +8,7 @@
             "    #include \"./tool/debug.hpp\"",
             "#else",
             "    #define dbg(...)",
+            "    #define dbgarr(a)",
             "#endif",
             "using ll = long long;",
             "",
