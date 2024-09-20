@@ -71,3 +71,17 @@ vim.keymap.set(
 	"<Cmd>set number <bar> setlocal relativenumber!<CR>",
 	{ desc = "toggle relative number" }
 )
+
+-- for competitive programming
+vim.keymap.set("n", "<leader>cc", function()
+	local cmd = string.format("tmux send-keys -t zsh 'cpt %s' C-m && tmux selectw -t zsh", vim.fn.expand("%:t:r"))
+	return string.format(":!%s<CR><CR>", cmd)
+end, { expr = true, desc = "Compile current file for cp" })
+vim.keymap.set("n", "<leader>co", function()
+	local cmd = string.format("tmux send-keys -t zsh 'cpt -o %s' C-m && tmux selectw -t zsh", vim.fn.expand("%:t:r"))
+	return string.format(":!%s<CR><CR>", cmd)
+end, { expr = true, desc = "Compile current file optimized for cp" })
+vim.keymap.set("n", "<leader>cr", function()
+	local cmd = string.format("tmux send-keys -t zsh './%s' C-m && tmux selectw -t zsh", vim.fn.expand("%:t:r"))
+	return string.format(":!%s<CR><CR>", cmd)
+end, { expr = true, desc = "Run current file for cp" })
