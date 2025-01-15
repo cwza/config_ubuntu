@@ -113,5 +113,33 @@
             ""
         ],
         "description": "Fast Power"
+    },
+    "Sparse Table Template": {
+        "prefix": "sparse table",
+        "body": [
+            "struct SparseTable {",
+            "    vector<vector<int>> sparse;",
+            "    SparseTable(vector<int> &inp) {",
+            "        int n = inp.size();",
+            "        int logn = 1;",
+            "        for(int i = 2; i < n; i*=2) logn++;",
+            "        sparse.resize(n, vector<int>(logn+1));",
+            "        for(int j = 0; j <= logn; j++) {",
+            "            for(int i = 0; i+(1<<j)-1 < n; i++) {",
+            "                if(j==0) sparse[i][0] = inp[i];",
+            "                else {",
+            "                    sparse[i][j] = min(sparse[i][j-1], sparse[i+(1<<(j-1))][j-1]); // change me",
+            "                }",
+            "            }",
+            "        }",
+            "    }",
+            "    int query(int l, int r) {",
+            "        int k = 31 - __builtin_clz(r-l+1);",
+            "        return min(sparse[l][k], sparse[r-(1<<k)+1][k]); // change me",
+            "    }",
+            "};",
+            ""
+        ],
+        "description": "Sparse Table Template"
     }
 }
